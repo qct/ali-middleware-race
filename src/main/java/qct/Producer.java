@@ -42,7 +42,7 @@ public class Producer {
                             "TagA",// tag
                             "OrderID001",// key
                             ("Hello MetaQ").getBytes());// body
-                    SendResult sendResult = producer.send(msg);
+                    SendResult sendResult = producer.send(msg, 20000);
                     System.out.println(sendResult);
                 }
 
@@ -51,7 +51,7 @@ public class Producer {
                             "TagB",// tag
                             "OrderID0034",// key
                             ("Hello MetaQ").getBytes());// body
-                    SendResult sendResult = producer.send(msg);
+                    SendResult sendResult = producer.send(msg, 20000);
                     System.out.println(sendResult);
                 }
 
@@ -60,7 +60,7 @@ public class Producer {
                             "TagC",// tag
                             "OrderID061",// key
                             ("Hello MetaQ").getBytes());// body
-                    SendResult sendResult = producer.send(msg);
+                    SendResult sendResult = producer.send(msg, 20000);
                     System.out.println(sendResult);
                 }
             } catch (Exception e) {
